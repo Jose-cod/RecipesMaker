@@ -15,6 +15,7 @@ fun main (args: Array<String>){
     do {
         if (response.equals("1")){
             println("Eligió hacer recetas")
+            makeRecipe()
 
         }else{
             if (response.equals("2")){
@@ -28,4 +29,15 @@ fun main (args: Array<String>){
         response= readLine()
     }while(!response.equals("3"))
 
+}
+//metodo make recipe
+fun makeRecipe(){
+    val mensaje="""Hacer receta
+Selecciona por categoría el ingrediente que buscas"""
+
+    val ingredients= arrayOf("Agua","leche","carne","Verduras","Frutas","Cereal","Huevos","Aceite")
+    //imprimir arreglo ingredients con índice +1
+    for(index in ingredients.indices){
+        println("${(index+1)}. ${ingredients.get(index)}")
+    }
 }
